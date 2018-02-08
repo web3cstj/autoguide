@@ -81,7 +81,8 @@ class Auto {
 	 */
 	static public function ariane($nomMarque="", $nomModele="") {
 		$resultat = '';
-		$resultat .= '<ul id="ariane">';
+		$resultat .= '<nav id="ariane">';
+		$resultat .= '<ul>';
 		if ($nomMarque === "") {
 			$resultat .= '<li><span>Accueil</span></li>';
 		} else if ($nomModele === "") {
@@ -93,6 +94,7 @@ class Auto {
 			$resultat .= '<li><span>'.$nomModele.'</span></li>';
 		}
 		$resultat .= '</ul>';
+		$resultat .= '</nav>';
 		return $resultat;
 	}
 

@@ -60,24 +60,25 @@ div.interface > section {
   flex: 1 0 auto;
   padding: 1em;
 }
-nav {
+nav#ariane {
   background-color: #3A2C0C;
   color: white;
   font-size: 1rem;
   text-align: center;
+  font-style: italic;
   font-weight: bold;
   padding: .25em;
 }
-nav > ul#ariane {
+nav#ariane > ul {
   list-style-type: none;
   display: flex;
   justify-content: center;
 }
-nav > ul#ariane > * + *:before {
+nav#ariane > ul > * + *:before {
   margin: 0 .5em;
   content: ">";
 }
-nav a {
+nav#ariane a {
   color: white;
 }
 section.body {

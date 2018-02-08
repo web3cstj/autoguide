@@ -1,32 +1,33 @@
 <?php
 /*
-Intégration web III - TP1
+=========================================================================
+Intégration web III - TP1 - Groupe du mardi
 -------------------------------------------------------------------------
 Votre nom :
 -------------------------------------------------------------------------
 Cette page affiche la liste des voitures disponibles sur le site
 - Inclure le fichier de la class Auto
-- Inclure le fichier donnees.php contenant les données des voitures
-- Commencer par le fichier Auto.php
+- Inclure le fichier donnees.inc.php contenant les données des voitures
+- Commencer par le fichier Auto.class.php
+=========================================================================
 */
-include_once("Auto.php");
-include_once("donnees.php");
+include_once("Auto.class.php");
+include_once("donnees.inc.php");
 ?><!DOCTYPE html>
 <html lang="fr">
 
 <head>
 	<meta charset="UTF-8" />
-	<link rel="stylesheet" type="text/css" href="autoguide.css" />
+	<link rel="stylesheet" href="autoguide.css" />
 	<title>Liste des voitures</title>
 </head>
 
 <body>
 	<div class="interface">
-		<header>
-			<h1><a href="index.php">AutoGuide.qc</a></h1>
-			<!-- /* Faire afficher le fil d'Ariane dans le nav; */ -->
-			<nav><?php echo Auto::ariane(); ?></nav>
-		</header>
+		<!-- /* Inclure le header ici */ -->
+		<?php include "header.php" ?>
+		<!-- /* Faire afficher le fil d'Ariane ici */ -->
+		<?php echo Auto::ariane(); ?>
 		<section class="body">
 			<article>
 				<header>
@@ -36,9 +37,8 @@ include_once("donnees.php");
 				<?php echo Auto::listeMarques($autos); ?>
 			</article>
 		</section>
-		<footer>
-			&copy; 2017 - Travail fait dans le cadre du cours <cite>Intégration Web III</cite>
-		</footer>
+		<!-- /* Inclure le footer ici */ -->
+		<?php include "footer.php" ?>
 	</div>
 </body>
 

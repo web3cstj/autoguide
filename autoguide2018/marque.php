@@ -1,24 +1,26 @@
 <?php
 /*
+=========================================================================
 Intégration web III - TP1 - Groupe du mardi
 -------------------------------------------------------------------------
 Votre nom :
 -------------------------------------------------------------------------
 Cette page affiche la liste des modèles en fonction de la marque fournie dans l'adresse
 - Inclure le fichier de la class Auto
-- Inclure le fichier donnees.php contenant les données des voitures (crée la variable $autos)
+- Inclure le fichier donnees.inc.php contenant les données des voitures (crée la variable $autos)
 - Commencer par le fichier Auto.class.php
 
 - Cette page s'attend à recevoir de l'adresse la donnée "nomMarque". Il faut donc récupérer cette donnée.
 - S'il manque la marque dans l'adresse, on DOIT retourner à la page index.php
 - Si la marque ne se trouve pas dans la variable $autos, on DOIT retourner à la page index.php
+=========================================================================
 */
 ?><!DOCTYPE html>
 <html lang="fr">
 
 <head>
 	<meta charset="UTF-8" />
-	<link rel="stylesheet" type="text/css" href="autoguide.css" />
+	<link rel="stylesheet" href="autoguide.css" />
 	<!-- /* Faire afficher le nom de la marque dans le title; */ -->
 	<title>Ford</title>
 </head>

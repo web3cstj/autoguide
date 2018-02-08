@@ -1,42 +1,46 @@
 <?php
 /*
+=========================================================================
 Intégration web III - TP1 - Groupe du mardi
 -------------------------------------------------------------------------
 Votre nom :
 -------------------------------------------------------------------------
 Cette page affiche une auto en fonction de la marque et de l'adresse fournis dans l'adresse
 - Inclure le fichier de la class Auto
-- Inclure le fichier donnees.php contenant les données des voitures
-- Commencer par le fichier Auto.php
+- Inclure le fichier donnees.inc.php contenant les données des voitures
+- Commencer par le fichier Auto.class.php
 
 - Cette page s'attend à recevoir de l'adresse les données "nomMarque" et "nomModele". Il faut donc récupérer ces données.
 - S'il manque une de ces deux données dans l'adresse, on DOIT retourner à la page index.php
 - Récupérer la voiture correspondante
 - Si la voiture ne se trouve pas dans la variable $autos, on DOIT retourner à la page index.php
+=========================================================================
 */
+
 ?><!DOCTYPE html>
 <html lang="fr">
 
 <head>
 	<meta charset="UTF-8" />
-	<link rel="stylesheet" type="text/css" href="autoguide.css" />
+	<link rel="stylesheet" href="autoguide.css" />
 	<!-- /* Faire afficher le titre de la voiture ici (dans un title); */ -->
 	<title>Ford Fiesta</title>
 </head>
 
 <body>
 	<div class="interface">
+		<!-- /* Inclure le header ici */ -->
 		<header>
 			<h1><a href="index.php">AutoGuide.qc</a></h1>
-			<nav id="ariane">
-				<!-- /* Faire afficher le fil d'Ariane ici; */ -->
-				<ul id="ariane">
-					<li><a href="index.php">Accueil</a></li>
-					<li><a href="marque.php?nomMarque=Ford">Ford</a></li>
-					<li><span>Fiesta</span></li>
-				</ul>
-			</nav>
 		</header>
+		<!-- /* Faire afficher le fil d'Ariane ici; */ -->
+		<nav id="ariane">
+			<ul>
+				<li><a href="index.php">Accueil</a></li>
+				<li><a href="marque.php?nomMarque=Ford">Ford</a></li>
+				<li><span>Fiesta</span></li>
+			</ul>
+		</nav>
 		<section class="body">
 			<article>
 				<header>
@@ -83,6 +87,10 @@ Cette page affiche une auto en fonction de la marque et de l'adresse fournis dan
 				</div>
 			</article>
 		</section>
+		<!-- /* Inclure le footer ici */ -->
+		<footer>
+			&copy; 2018 - Travail fait dans le cadre du cours <cite>Intégration Web III</cite>
+		</footer>
 	</div>
 </body>
 

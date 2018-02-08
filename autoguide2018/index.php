@@ -1,20 +1,22 @@
 <?php
 /*
-Intégration web III - TP1 - Groupe du mardi
+=========================================================================
+Intégration web III - TP1
 -------------------------------------------------------------------------
 Votre nom :
 -------------------------------------------------------------------------
 Cette page affiche la liste des voitures disponibles sur le site
 - Inclure le fichier de la class Auto
-- Inclure le fichier donnees.php contenant les données des voitures
-- Commencer par le fichier Auto.php
+- Inclure le fichier donnees.inc.php contenant les données des voitures
+- Commencer par le fichier Auto.class.php
+=========================================================================
 */
 ?><!DOCTYPE html>
 <html lang="fr">
 
 <head>
 	<meta charset="UTF-8" />
-	<link rel="stylesheet" type="text/css" href="autoguide.css" />
+	<link rel="stylesheet" href="autoguide.css" />
 	<title>Liste des voitures</title>
 </head>
 
@@ -70,7 +72,7 @@ Cette page affiche la liste des voitures disponibles sur le site
 			</article>
 		</section>
 		<footer>
-			&copy; 2017 - Travail fait dans le cadre du cours <cite>Intégration Web III</cite>
+			&copy; 2018 - Travail fait dans le cadre du cours <cite>Intégration Web III</cite>
 		</footer>
 	</div>
 </body>
