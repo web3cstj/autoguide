@@ -35,6 +35,26 @@ class Auto {
 		return $resultat;
 	}
 
+	/** Méthode "trouverModele" qui retourne le array représentant un modele de voiture.
+	 * En fonction de la marque et du modele envoyé en paramètres.
+	 * Si la marque n'existe pas ou le modele n'existe pas pour cette marque, on retourne false
+	 * @param array $autos - Le array contenant les autos
+	 * @param string $nomMarque - La marque à rechercher
+	 * @param string $nomModele - Le modele à rechercher dans la marque
+	 * @return array - Le array du modele ou false
+	 */
+
+
+	/** Méthode "ariane" qui retourne le HTML du fil d'Ariane se trouvant DANS le div "menu"
+	 * Notes :
+	 * - Si une $nomMarque est fournie, on retourne le titre de la voiture et un lien vers index (voir la maquette)
+	 * - Si une $nomMarque n'est pas fournie, on ne retourne que le mot "Accueil" (voir la maquette)
+	 * @param string $nomMarque - La marque de voiture. Valeur par défaut : "".
+	 * @param string $nomModele - Le modele de voiture. Valeur par défaut : "".
+	 * @return string - Le HTML du fil d'Ariane
+	 */
+
+
 	/** Méthode "lien" qui retourne le code HTML d'un lien retrouvé dans la page index
 	 * qui permet d'afficher les détails d'une voiture
 	 * @param string $nomMarque - La marque de voiture
@@ -55,16 +75,6 @@ class Auto {
 	 */
 
 
-	/** Méthode "ariane" qui retourne le HTML du fil d'Ariane se trouvant DANS le div "menu"
-	 * Notes :
-	 * - Si une $nomMarque est fournie, on retourne le titre de la voiture et un lien vers index (voir la maquette)
-	 * - Si une $nomMarque n'est pas fournie, on ne retourne que le mot "Accueil" (voir la maquette)
-	 * @param string $nomMarque - La marque de voiture. Valeur par défaut : "".
-	 * @param string $nomModele - Le modele de voiture. Valeur par défaut : "".
-	 * @return string - Le HTML du fil d'Ariane
-	 */
-
-
 	/** Méthode "listeMarques" qui retourne le HTML du ul "listeMarques"
 	 * contenant la liste des voitures (voir maquette, page index.php) en fonction du paramètre
 	 * @param array $autos - Le array contenant les autos
@@ -77,16 +87,6 @@ class Auto {
 	 * @param array $nomMarque - Le nom de la marque à parcourir
 	 * @param array $autosMarque - Le array contenant les autos
 	 * @return string - Le HTML du ul "listeModeles"
-	 */
-
-
-	/** Méthode "trouverModele" qui retourne le array représentant un modele de voiture.
-	 * En fonction de la marque et du modele envoyé en paramètres.
-	 * Si la marque n'existe pas ou le modele n'existe pas pour cette marque, on retourne false
-	 * @param array $autos - Le array contenant les autos
-	 * @param string $nomMarque - La marque à rechercher
-	 * @param string $nomModele - Le modele à rechercher dans la marque
-	 * @return array - Le array du modele ou false
 	 */
 
 

@@ -35,6 +35,47 @@ class Auto {
 		return $resultat;
 	}
 
+	/** Méthode "trouverModele" qui retourne le array représentant un modele de voiture.
+	 * En fonction de la marque et du modele envoyé en paramètres.
+	 * Si la marque n'existe pas ou le modele n'existe pas pour cette marque, on retourne false
+	 * @param array $autos - Le array contenant les autos
+	 * @param string $nomMarque - La marque à rechercher
+	 * @param string $nomModele - Le modele à rechercher dans la marque
+	 * @return array - Le array du modele ou false
+	 */
+	static public function trouverModele($autos, $nomMarque, $nomModele) {
+		if (!isset($autos[$nomMarque])) return false;
+		if (!isset($autos[$nomMarque][$nomModele])) return false;
+		return $autos[$nomMarque][$nomModele];
+	}
+
+	/** Méthode "ariane" qui retourne le HTML du fil d'Ariane se trouvant DANS le div "menu"
+	 * Notes :
+	 * - Si une $nomMarque est fournie, on retourne le titre de la voiture et un lien vers index (voir la maquette)
+	 * - Si une $nomMarque n'est pas fournie, on ne retourne que le mot "Accueil" (voir la maquette)
+	 * @param string $nomMarque - La marque de voiture. Valeur par défaut : "".
+	 * @param string $nomModele - Le modele de voiture. Valeur par défaut : "".
+	 * @return string - Le HTML du fil d'Ariane
+	 */
+	static public function ariane($nomMarque="", $nomModele="") {
+		$resultat = '';
+		$resultat .= '<nav id="ariane">';
+		$resultat .= '<ul>';
+		if ($nomMarque === "") {
+			$resultat .= '<li><span>Accueil</span></li>';
+		} else if ($nomModele === "") {
+			$resultat .= '<li><a href="index.php">Accueil</a></li>';
+			$resultat .= '<li><span>'.Auto::titre($nomMarque).'</span></li>';
+		} else {
+			$resultat .= '<li><a href="index.php">Accueil</a></li>';
+			$resultat .= '<li><a href="marque.php?nomMarque='.$nomMarque.'">'.$nomMarque.'</a></li>';
+			$resultat .= '<li><span>'.$nomModele.'</span></li>';
+		}
+		$resultat .= '</ul>';
+		$resultat .= '</nav>';
+		return $resultat;
+	}
+
 	/** Méthode "lien" qui retourne le code HTML d'un lien retrouvé dans la page index
 	 * qui permet d'afficher les détails d'une voiture
 	 * @param string $nomMarque - La marque de voiture
@@ -68,33 +109,6 @@ class Auto {
 		$src = 'images/'.strtolower($nomMarque)."_".strtolower($nomModele).$suffixe.'.jpg';
 		$titre = Auto::titre($nomMarque, $nomModele);
 		$resultat = '<img class="'.$class.'" src="'.$src.'" alt="'.$titre.'" title="'.$titre.'"/>';
-		return $resultat;
-	}
-
-	/** Méthode "ariane" qui retourne le HTML du fil d'Ariane se trouvant DANS le div "menu"
-	 * Notes :
-	 * - Si une $nomMarque est fournie, on retourne le titre de la voiture et un lien vers index (voir la maquette)
-	 * - Si une $nomMarque n'est pas fournie, on ne retourne que le mot "Accueil" (voir la maquette)
-	 * @param string $nomMarque - La marque de voiture. Valeur par défaut : "".
-	 * @param string $nomModele - Le modele de voiture. Valeur par défaut : "".
-	 * @return string - Le HTML du fil d'Ariane
-	 */
-	static public function ariane($nomMarque="", $nomModele="") {
-		$resultat = '';
-		$resultat .= '<nav id="ariane">';
-		$resultat .= '<ul>';
-		if ($nomMarque === "") {
-			$resultat .= '<li><span>Accueil</span></li>';
-		} else if ($nomModele === "") {
-			$resultat .= '<li><a href="index.php">Accueil</a></li>';
-			$resultat .= '<li><span>'.Auto::titre($nomMarque).'</span></li>';
-		} else {
-			$resultat .= '<li><a href="index.php">Accueil</a></li>';
-			$resultat .= '<li><a href="marque.php?nomMarque='.$nomMarque.'">'.$nomMarque.'</a></li>';
-			$resultat .= '<li><span>'.$nomModele.'</span></li>';
-		}
-		$resultat .= '</ul>';
-		$resultat .= '</nav>';
 		return $resultat;
 	}
 
@@ -133,20 +147,6 @@ class Auto {
 		}
 		$resultat .= '</ul>';
 		return $resultat;
-	}
-
-	/** Méthode "trouverModele" qui retourne le array représentant un modele de voiture.
-	 * En fonction de la marque et du modele envoyé en paramètres.
-	 * Si la marque n'existe pas ou le modele n'existe pas pour cette marque, on retourne false
-	 * @param array $autos - Le array contenant les autos
-	 * @param string $nomMarque - La marque à rechercher
-	 * @param string $nomModele - Le modele à rechercher dans la marque
-	 * @return array - Le array du modele ou false
-	 */
-	static public function trouverModele($autos, $nomMarque, $nomModele) {
-		if (!isset($autos[$nomMarque])) return false;
-		if (!isset($autos[$nomMarque][$nomModele])) return false;
-		return $autos[$nomMarque][$nomModele];
 	}
 
 	/**	Méthode "ligne" qui retourne une ligne (<tr>) du tableau des caractéristiques
@@ -251,3 +251,6 @@ class Auto {
 	}
 
 }
+
+/*LIGNE DE TEST*/
+//echo Auto::titre('Ford', 'Fiesta', 'strong');

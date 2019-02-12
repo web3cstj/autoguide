@@ -15,8 +15,7 @@ Cette page affiche la liste des modèles en fonction de la marque fournie dans l
 - Si la marque ne se trouve pas dans la variable $autos, on DOIT retourner à la page index.php
 =========================================================================
 */
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html lang="fr">
 
 <head>
