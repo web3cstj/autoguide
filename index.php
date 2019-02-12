@@ -8,11 +8,11 @@ Votre nom :
 Cette page affiche la liste des voitures disponibles sur le site
 - Inclure le fichier de la class Auto
 - Inclure le fichier donnees.inc.php contenant les données des voitures
-- Commencer par le fichier Auto.class.php
+- Commencer par le fichier Auto.php
 =========================================================================
 */
-include_once("Auto.class.php");
-include_once("donnees.inc.php");
+include_once("includes/Auto.php");
+include_once("includes/donnees.inc.php");
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -25,7 +25,7 @@ include_once("donnees.inc.php");
 <body>
 	<div class="interface">
 		<!-- /* Inclure le header ici */ -->
-		<?php include "header.php" ?>
+		<?php include "includes/header.php" ?>
 		<!-- /* Faire afficher le fil d'Ariane ici */ -->
 		<?php echo Auto::ariane(); ?>
 		<section class="body">
@@ -34,11 +34,11 @@ include_once("donnees.inc.php");
 					<h1>Liste des voitures</h1>
 				</header>
 				<!-- /* Faire afficher la liste des voitures ici */ -->
-				<?php echo Auto::listeMarques($autos); ?>
+				<?php echo Auto::listeMarques($donnees); ?>
 			</article>
 		</section>
 		<!-- /* Inclure le footer ici */ -->
-		<?php include "footer.php" ?>
+		<?php include "includes/footer.php" ?>
 	</div>
 </body>
 

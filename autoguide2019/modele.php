@@ -8,12 +8,12 @@ Votre nom :
 Cette page affiche une auto en fonction de la marque et de l'adresse fournis dans l'adresse
 - Inclure le fichier de la class Auto
 - Inclure le fichier donnees.inc.php contenant les données des voitures
-- Commencer par le fichier Auto.class.php
+- Commencer par le fichier Auto.php
 
 - Cette page s'attend à recevoir de l'adresse les données "nomMarque" et "nomModele". Il faut donc récupérer ces données.
 - S'il manque une de ces deux données dans l'adresse, on DOIT retourner à la page index.php
 - Récupérer la voiture correspondante
-- Si la voiture ne se trouve pas dans la variable $autos, on DOIT retourner à la page index.php
+- Si la voiture ne se trouve pas dans la variable $donnees, on DOIT retourner à la page index.php
 =========================================================================
 */
 

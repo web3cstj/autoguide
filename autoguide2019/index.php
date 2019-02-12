@@ -8,7 +8,7 @@ Votre nom :
 Cette page affiche la liste des voitures disponibles sur le site
 - Inclure le fichier de la class Auto
 - Inclure le fichier donnees.inc.php contenant les données des voitures
-- Commencer par le fichier Auto.class.php
+- Commencer par le fichier Auto.php
 =========================================================================
 */
 ?><!DOCTYPE html>

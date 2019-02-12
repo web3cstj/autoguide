@@ -8,16 +8,16 @@ Votre nom :
 Cette page affiche une auto en fonction de la marque et de l'adresse fournis dans l'adresse
 - Inclure le fichier de la class Auto
 - Inclure le fichier donnees.inc.php contenant les données des voitures
-- Commencer par le fichier Auto.class.php
+- Commencer par le fichier Auto.php
 
 - Cette page s'attend à recevoir de l'adresse les données "nomMarque" et "nomModele". Il faut donc récupérer ces données.
 - S'il manque une de ces deux données dans l'adresse, on DOIT retourner à la page index.php
 - Récupérer la voiture correspondante
-- Si la voiture ne se trouve pas dans la variable $autos, on DOIT retourner à la page index.php
+- Si la voiture ne se trouve pas dans la variable $donnees, on DOIT retourner à la page index.php
 =========================================================================
 */
-include_once("Auto.class.php");
-include_once("donnees.inc.php");
+include_once("includes/donnees.inc.php");
+include_once("includes/Auto.php");
 
 if (!isset($_GET['nomMarque']) || !isset($_GET['nomModele'])) {
 	header("location:index.php");
@@ -25,7 +25,7 @@ if (!isset($_GET['nomMarque']) || !isset($_GET['nomModele'])) {
 }
 $nomMarque = $_GET['nomMarque'];
 $nomModele = $_GET['nomModele'];
-$voiture = Auto::trouverModele($autos, $nomMarque, $nomModele);
+$voiture = Auto::trouverModele($donnees, $nomMarque, $nomModele);
 if ($voiture === false) {
 	header("location:index.php");
 	exit;
@@ -43,7 +43,7 @@ if ($voiture === false) {
 <body>
 	<div class="interface">
 		<!-- /* Inclure le header ici */ -->
-		<?php include "header.php" ?>
+		<?php include "includes/header.php" ?>
 		<!-- /* Faire afficher le fil d'Ariane ici; */ -->
 		<?php echo Auto::ariane($nomMarque, $nomModele); ?>
 		<section class="body">
@@ -57,7 +57,7 @@ if ($voiture === false) {
 			</article>
 		</section>
 		<!-- /* Inclure le footer ici */ -->
-		<?php include "footer.php" ?>
+		<?php include "includes/footer.php" ?>
 	</div>
 </body>
 </html>
