@@ -35,7 +35,7 @@ if ($voiture === false) {
 
 <head>
 	<meta charset="UTF-8" />
-	<link rel="stylesheet" href="autoguide.css" />
+	<link rel="stylesheet" href="css/autoguide.css" />
 	<!-- /* Faire afficher le titre de la voiture ici (dans un title); */ -->
 	<?php echo Auto::titre($nomMarque, $nomModele, 'title') ?>
 </head>

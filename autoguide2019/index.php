@@ -16,7 +16,7 @@ Cette page affiche la liste des voitures disponibles sur le site
 
 <head>
 	<meta charset="UTF-8" />
-	<link rel="stylesheet" href="autoguide.css" />
+	<link rel="stylesheet" href="css/autoguide.css" />
 	<title>Liste des voitures</title>
 </head>
 

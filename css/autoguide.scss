@@ -1,5 +1,8 @@
-@couleur-foncee: #375387;
-@couleur-foncee: #121E3A;
+:root {
+	--couleur-foncee: #375387;
+	--couleur-foncee: #121E3A;
+}
+
 body,
 html {
 	height: 100%;
@@ -28,7 +31,7 @@ div.interface {
 	flex-direction: column;
 	& > header,
 	& > footer {
-		background-color: @couleur-foncee;
+		background-color: var(--couleur-foncee);
 		color: #876E37;
 		text-align: center;
 		font-style: italic;
@@ -54,8 +57,6 @@ div.interface {
 			text-align: center;
 			font-size: 4em;
 		}
-	}
-	& > footer {
 	}
 	& > section {
 		flex: 1 0 auto;
@@ -92,7 +93,7 @@ section.body {
 }
 article {
 	border-radius: 1em 1em 1em 1em;
-	color: @couleur-foncee;
+	color: var(--couleur-foncee);
 	border: .2em solid;
 	background: none repeat scroll 0 0 #cdd8ed;
 	margin: 0 auto;
@@ -101,7 +102,7 @@ article {
 	overflow: hidden;
 	min-width: 25em;
 	& > header {
-		background: @couleur-foncee;
+		background: var(--couleur-foncee);
 		& > h1 {
 			color: #cdd8ed;
 			font-size: 2em;
@@ -116,7 +117,7 @@ article {
 		padding-top: 0;
 	}
 	& h2 {
-		color: @couleur-foncee;
+		color: var(--couleur-foncee);
 		margin-bottom: 0em;
 	}
 }
@@ -132,7 +133,6 @@ ul.listeModeles {
 }
 ul.listeMarques
 {
-	zzzfont-size: larger;
 	list-style-type: none;
 	& > li > a {
 		font-size: larger;
@@ -150,7 +150,6 @@ ul.listeModeles {
 		list-style-type: none;
 		& > a {
 			display: flex;
-			zalign-items: center;
 			& > * + * {
 				margin-left: .5em;
 			}
@@ -167,7 +166,6 @@ ul.listeModeles {
 		& + * {
 			margin-top: .25em;
 			padding-top: .25em;
-			zzzborder-top: 1px solid rgba(0,0,0,.1);
 		}
 	}
 }
@@ -192,7 +190,7 @@ table.caracteristiques {
 	border-collapse: collapse;
 	width: 100%;
 	& td {
-		border: 1px solid @couleur-foncee;
+		border: 1px solid var(--couleur-foncee);
 		border-style: solid none;
 		&.etiquette {
 			padding-right: 1em;

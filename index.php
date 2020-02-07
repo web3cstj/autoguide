@@ -18,7 +18,7 @@ include_once("includes/donnees.inc.php");
 
 <head>
 	<meta charset="UTF-8" />
-	<link rel="stylesheet" href="autoguide.css" />
+	<link rel="stylesheet" href="css/autoguide.css" />
 	<title>Liste des voitures</title>
 </head>
 

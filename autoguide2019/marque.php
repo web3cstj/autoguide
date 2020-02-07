@@ -20,7 +20,7 @@ Cette page affiche la liste des modèles en fonction de la marque fournie dans l
 
 <head>
 	<meta charset="UTF-8" />
-	<link rel="stylesheet" href="autoguide.css" />
+	<link rel="stylesheet" href="css/autoguide.css" />
 	<!-- /* Faire afficher le nom de la marque dans le title; */ -->
 	<title>Ford</title>
 </head>

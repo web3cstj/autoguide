@@ -22,7 +22,7 @@ Cette page affiche une auto en fonction de la marque et de l'adresse fournis dan
 
 <head>
 	<meta charset="UTF-8" />
-	<link rel="stylesheet" href="autoguide.css" />
+	<link rel="stylesheet" href="css/autoguide.css" />
 	<!-- /* Faire afficher le titre de la voiture ici (dans un title); */ -->
 	<title>Ford Fiesta</title>
 </head>
