@@ -16,8 +16,8 @@ Cette page affiche une auto en fonction de la marque et de l'adresse fournis dan
 - Si la voiture ne se trouve pas dans la variable $donnees, on DOIT retourner à la page index.php
 =========================================================================
 */
-include_once("includes/donnees.inc.php");
-include_once("includes/Auto.php");
+include_once("../src/donnees.inc.php");
+include_once("../src/Auto.php");
 
 if (!isset($_GET['nomMarque']) || !isset($_GET['nomModele'])) {
 	header("location:index.php");
@@ -43,7 +43,7 @@ if ($voiture === false) {
 <body>
 	<div class="interface">
 		<!-- /* Inclure le header ici */ -->
-		<?php include "includes/header.php" ?>
+		<?php include "../components/header.php" ?>
 		<!-- /* Faire afficher le fil d'Ariane ici; */ -->
 		<?php echo Auto::ariane($nomMarque, $nomModele); ?>
 		<section class="body">
@@ -57,7 +57,7 @@ if ($voiture === false) {
 			</article>
 		</section>
 		<!-- /* Inclure le footer ici */ -->
-		<?php include "includes/footer.php" ?>
+		<?php include "../components/footer.php" ?>
 	</div>
 </body>
 </html>

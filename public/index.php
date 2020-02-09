@@ -11,8 +11,8 @@ Cette page affiche la liste des voitures disponibles sur le site
 - Commencer par le fichier Auto.php
 =========================================================================
 */
-include_once("includes/Auto.php");
-include_once("includes/donnees.inc.php");
+include_once("../src/Auto.php");
+include_once("../src/donnees.inc.php");
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -25,7 +25,7 @@ include_once("includes/donnees.inc.php");
 <body>
 	<div class="interface">
 		<!-- /* Inclure le header ici */ -->
-		<?php include "includes/header.php" ?>
+		<?php include "../components/header.php" ?>
 		<!-- /* Faire afficher le fil d'Ariane ici */ -->
 		<?php echo Auto::ariane(); ?>
 		<section class="body">
@@ -38,7 +38,7 @@ include_once("includes/donnees.inc.php");
 			</article>
 		</section>
 		<!-- /* Inclure le footer ici */ -->
-		<?php include "includes/footer.php" ?>
+		<?php include "../components/footer.php" ?>
 	</div>
 </body>
 

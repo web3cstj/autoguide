@@ -11,7 +11,7 @@ html {
 body {
   font-family: Palatino Linotype, Book Antiqua3, Palatino, serif;
   background-color: #EEEEEE;
-  background-image: url(images/fond.png);
+  background-image: url(../images/fond.png);
   margin: 0;
 }
 
@@ -64,7 +64,7 @@ div.interface > header {
 }
 div.interface > header h1 {
   padding: 0.2em;
-  background-image: url(images/fond_voiture.png);
+  background-image: url(../images/fond_voiture.png);
   background-repeat: no-repeat;
   background-position: left;
   background-size: auto 100%;

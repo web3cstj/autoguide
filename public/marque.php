@@ -15,8 +15,8 @@ Cette page affiche la liste des modèles en fonction de la marque fournie dans l
 - Si la marque ne se trouve pas dans la variable $donnees, on DOIT retourner à la page index.php
 =========================================================================
 */
-include_once "includes/donnees.inc.php";
-include_once "includes/Auto.php";
+include_once "../src/donnees.inc.php";
+include_once "../src/Auto.php";
 if (!isset($_GET['nomMarque'])) {
 	header("location:index.php");
 	exit;
@@ -41,7 +41,7 @@ $marque = $donnees[$nomMarque];
 <body>
 	<div class="interface">
 		<!-- /* Inclure le header ici */ -->
-		<?php include "includes/header.php" ?>
+		<?php include "../components/header.php" ?>
 		<!-- /* Faire afficher le fil d'Ariane ici; */ -->
 		<?php echo Auto::ariane($nomMarque); ?>
 		<section class="body">
@@ -55,7 +55,7 @@ $marque = $donnees[$nomMarque];
 			</article>
 		</section>
 		<!-- /* Inclure le footer ici */ -->
-		<?php include "includes/footer.php" ?>
+		<?php include "../components/footer.php" ?>
 
 	</div>
 </body>
