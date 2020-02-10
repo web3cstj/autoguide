@@ -36,10 +36,7 @@ div.volet {
 	box-sizing: border-box;
 
 	padding: .25in;
-	font-size: 10.25pt;
-	& > * {
-//		border: 1px solid black;
-	}
+	font-size: 10pt;
 	table {
 		border-collapse: collapse;
 		width: 100%;
@@ -54,9 +51,6 @@ div.volet {
 			margin:0;
 		}
 	}
-	td:last-child {
-//		width: 15ch;
-	}
 	td.compile {
 		text-align: right;
 	}
@@ -66,10 +60,6 @@ div.volet {
 			&::after {
 				content: "/" attr(data-valeur);
 			}
-		}
-	}
-	tr.div {
-		th {
 		}
 	}
 	tr.h1, tr.h2, tr.h3 {
@@ -97,7 +87,6 @@ div.volet {
 		font-size: 1em;
 			color: hsl(0,0,50%);
 			border:1px solid;
-	//		border-radius: 100%;
 			flex: 0 0 1em;
 			border-right-width: 0;
 			&:first-child {
