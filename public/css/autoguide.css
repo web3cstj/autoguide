@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Tulpen+One|Play&display=swap");
 :root {
   --couleur-foncee: #375387;
   --couleur-foncee: #121E3A;
@@ -9,7 +10,7 @@ html {
 }
 
 body {
-  font-family: Palatino Linotype, Book Antiqua3, Palatino, serif;
+  font-family: "Play", sans-serif;
   background-color: #EEEEEE;
   background-image: url(../images/fond.png);
   margin: 0;
@@ -50,6 +51,7 @@ div.interface > header *, div.interface > footer * {
   margin: 0;
 }
 div.interface > header {
+  font-family: "Tulpen One", cursive;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -63,8 +65,7 @@ div.interface > header {
           flex-direction: column;
 }
 div.interface > header h1 {
-  padding: 0.2em;
-  background-image: url(../images/fond_voiture.png);
+  background-image: url(images/fond_voiture.png);
   background-repeat: no-repeat;
   background-position: left;
   background-size: auto 100%;
@@ -114,9 +115,6 @@ nav#ariane a {
 }
 
 section.body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -129,14 +127,12 @@ section.body {
 article {
   border-radius: 1em 1em 1em 1em;
   color: var(--couleur-foncee);
-  border: 0.2em solid;
   background: none repeat scroll 0 0 #cdd8ed;
   margin: 0 auto;
   padding: 0em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
-  min-width: 25em;
 }
 article > header {
   background: var(--couleur-foncee);
@@ -147,10 +143,12 @@ article > header > h1 {
   margin: 0;
   margin-bottom: 0.5em;
   padding: 0 0.5em;
-  font-variant: small-caps;
+  font-family: "Saira Stencil One", cursive;
+  font-family: "Bahianita", cursive;
+  font-family: "Tulpen One", cursive;
 }
 article > ul {
-  padding: 1em;
+  padding: 0.5em;
   padding-top: 0;
 }
 article h2 {
@@ -169,25 +167,25 @@ ul.listeModeles a:hover {
 }
 
 ul.listeMarques {
+  display: grid;
+  grid-gap: 1em;
   list-style-type: none;
 }
 ul.listeMarques > li > a {
-  font-size: larger;
+  font-size: 1.3em;
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.1);
   display: block;
   padding: 0 0.5em;
-  margin: 1em 0 0.5em;
 }
 
+ul.listeModeles {
+  display: grid;
+  grid-gap: 0.5em;
+  margin-top: 0.5em;
+  grid-template-columns: repeat(auto-fill, minmax(12em, 12em));
+}
 ul.listeModeles > li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   list-style-type: none;
 }
 ul.listeModeles > li > a {
@@ -212,10 +210,6 @@ ul.listeModeles > li > a > span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-ul.listeModeles > li + * {
-  margin-top: 0.25em;
-  padding-top: 0.25em;
 }
 
 div.voiture {
@@ -253,13 +247,13 @@ table.caracteristiques td.etiquette {
   font-weight: bold;
 }
 
-@media (min-aspect-ratio: 4/3) {
+@media (min-aspect-ratio: 3/4) {
   html {
-    font-size: 4vh;
+    font-size: 4.5vh;
   }
 }
-@media (max-aspect-ratio: 4/3) {
+@media (max-aspect-ratio: 3/4) {
   html {
-    font-size: 3vw;
+    font-size: 6vw;
   }
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Tulpen+One|Play&display=swap');
+
 :root {
 	--couleur-foncee: #375387;
 	--couleur-foncee: #121E3A;
@@ -8,9 +10,9 @@ html {
 	height: 100%;
 }
 body {
-	font-family: Palatino Linotype, Book Antiqua3, Palatino, serif;
+	font-family: 'Play', sans-serif;
 	background-color: #EEEEEE;
-	background-image: url(images/fond.png);
+	background-image: url(../images/fond.png);
 	margin: 0;
 }
 a {
@@ -41,12 +43,12 @@ div.interface {
 		}
 	}
 	& > header {
+		font-family: 'Tulpen One', cursive;
 		text-shadow: 3px 3px 3px rgba(0, 0, 0, .5);
 		display: flex;
 		flex: 0 0 auto;
 		flex-direction: column;
 		& h1 {
-			padding: .2em;
 			background-image: url(images/fond_voiture.png);
 			background-repeat: no-repeat;
 			background-position: left;
@@ -87,20 +89,20 @@ nav#ariane {
 	}
 }
 section.body {
-	display: flex;
+	// display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 article {
 	border-radius: 1em 1em 1em 1em;
 	color: var(--couleur-foncee);
-	border: .2em solid;
+	// border: .2em solid;
 	background: none repeat scroll 0 0 #cdd8ed;
 	margin: 0 auto;
 	padding: 0em;
 	box-sizing: border-box;
 	overflow: hidden;
-	min-width: 25em;
+	// min-width: 16em;
 	& > header {
 		background: var(--couleur-foncee);
 		& > h1 {
@@ -109,11 +111,17 @@ article {
 			margin: 0;
 			margin-bottom: .5em;
 			padding: 0 .5em;
-			font-variant: small-caps;
+
+			font-family: 'Saira Stencil One', cursive;
+		
+			font-family: 'Bahianita', cursive;
+		
+			font-family: 'Tulpen One', cursive;
+					// font-variant: small-caps;
 		}
 	}
 	& > ul {
-		padding: 1em;
+		padding: .5em;
 		padding-top: 0;
 	}
 	& h2 {
@@ -133,20 +141,23 @@ ul.listeModeles {
 }
 ul.listeMarques
 {
+	display: grid;
+	grid-gap: 1em;
 	list-style-type: none;
 	& > li > a {
-		font-size: larger;
+		font-size: 1.3em;
 		font-weight: bold;
 		background-color: rgba(0,0,0,.1);
 		display: block;
 		padding: 0 .5em;
-		margin: 1em 0 .5em;
 	}
 }
 ul.listeModeles {
+	display: grid;
+	grid-gap: .5em;
+	margin-top: .5em;
+	grid-template-columns: repeat(auto-fill, minmax(12em, 12em));
 	& > li {
-		display: flex;
-		flex-direction: column;
 		list-style-type: none;
 		& > a {
 			display: flex;
@@ -162,10 +173,6 @@ ul.listeModeles {
 				display: flex;
 				align-items: center;
 			}
-		}
-		& + * {
-			margin-top: .25em;
-			padding-top: .25em;
 		}
 	}
 }
@@ -198,13 +205,13 @@ table.caracteristiques {
 		}
 	}
 }
-@media (min-aspect-ratio:4/3) {
+@media (min-aspect-ratio:3/4) {
 	html {
-		font-size: 4vh;
+		font-size: 4.5vh;
 	}
 }
-@media (max-aspect-ratio:4/3) {
+@media (max-aspect-ratio:3/4) {
 	html {
-		font-size: 3vw;
+		font-size: 6vw;
 	}
 }
