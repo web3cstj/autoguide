@@ -15,20 +15,10 @@ Cette page affiche la liste des modèles en fonction de la marque fournie dans l
 - Si la marque ne se trouve pas dans la variable $voitures, on DOIT retourner à la page index.php
 =========================================================================
 */
-include_once "../src/donnees.inc.php";
-include_once "../src/Auto.php";
-if (!isset($_GET['nomMarque'])) {
-	header("location:index.php");
-	exit;
-}
-$nomMarque = $_GET['nomMarque'];
-if (!isset($voitures[$nomMarque])) {
-	header("location:index.php");
-	exit;
-}
-$marque = $voitures[$nomMarque];
 
-?><!DOCTYPE html>
+
+?>
+<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -41,21 +31,34 @@ $marque = $voitures[$nomMarque];
 <body>
 	<div class="interface">
 		<!-- /* Inclure le header ici */ -->
-		<?php include "../components/header.php" ?>
+		<header>
+			<h1><a href="index.php">AutoGuide.qc</a></h1>
+		</header>
 		<!-- /* Faire afficher le fil d'Ariane ici; */ -->
-		<?php echo Auto::ariane($nomMarque); ?>
+		<nav id="ariane">
+			<ul>
+				<li><a href="index.php">Accueil</a></li>
+				<li><span>Ferrari </span></li>
+			</ul>
+		</nav>
 		<section class="body">
 			<article>
 				<header>
 					<!-- /* Faire afficher le nom de la marque dans le h1; */ -->
-					<h1>Ford</h1>
+					<h1>Ferrari</h1>
 				</header>
 				<!-- /* Faire afficher la liste de modèles ici; */ -->
-				<?php echo Auto::listeModeles($nomMarque, $marque) ?>
+				<ul class="listeModeles">
+					<li><a href="modele.php?nomMarque=Ferrari&amp;nomModele=California"><img class="tb"
+								src="images/voitures/ferrari_california_tb.jpg" alt="Ferrari California"
+								title="Ferrari California" /><span>California</span></a></li>
+				</ul>
 			</article>
 		</section>
 		<!-- /* Inclure le footer ici */ -->
-		<?php include "../components/footer.php" ?>
+		<footer>
+			&copy; 2020 - Travail fait dans le cadre du cours <cite>Intégration Web III</cite>
+		</footer>
 
 	</div>
 </body>
