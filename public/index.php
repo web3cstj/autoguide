@@ -34,7 +34,7 @@ include_once("../src/donnees.inc.php");
 					<h1>Liste des voitures</h1>
 				</header>
 				<!-- /* Faire afficher la liste des voitures ici */ -->
-				<?php echo Auto::listeMarques($donnees); ?>
+				<?php echo Auto::listeMarques($voitures); ?>
 			</article>
 		</section>
 		<!-- /* Inclure le footer ici */ -->

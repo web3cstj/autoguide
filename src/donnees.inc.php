@@ -2,7 +2,7 @@
 /* Ce fichier est complet. Vous ne devez pas le modifier, mais vous devez l'inclure dans vos pages. */
 
 /*
-$donnees est un array associatif qui contient chaque marque de voiture ("Ford", "Nissan", "Ferrari", etc.). La clé est le nom de la marque.
+$voitures est un array associatif qui contient chaque marque de voiture ("Ford", "Nissan", "Ferrari", etc.). La clé est le nom de la marque.
 Chaque marque est constituée d'un autre array associatif qui contient chaque modèle de voiture associée à cette marque ("Focus", "Fiesta", "Fusion", etc.). La clé est le nom du modèle.
 Chaque modèle est lui-même un array associatif contenant les éléments (clés) suivants :
 	prix : Le prix de la voiture,
@@ -13,7 +13,7 @@ Chaque modèle est lui-même un array associatif contenant les éléments (clés
 	consommation : Un array associatif de la consommation en ville et sur l'autoroute,
 	description : Un paragraphe descriptif,
 */
-$donnees = array(
+$voitures = array(
 	'Ford'=>array(
 		'Fiesta'=>array(
 			'prix'=>14349,

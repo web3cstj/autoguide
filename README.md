@@ -1,11 +1,33 @@
-# La classe Auto
+# Projet 1 : AUTOGUIDE 2020
+## Les fichiers
+
+	📁components	(Des sections de page)
+		📄footer.php
+		📄header.php
+	📁grille	(La grille de correction)
+	📁public
+		📁css
+		📁images
+			📁voitures	(Les images des voitures)
+			📄fond.png
+		📄index.php	(La liste des marques)
+		📄modele.php	(La liste des modèles)
+		📄marque.php	(Les détails d'une voiture)
+		📄tests.php	(Pour tester les méthodes)
+	📁src
+		📄Auto.php	(LA CLASSE)
+		📄donnees.inc.php	(Les données à utiliser)
+	📄index.php	(Ne pas toucher)
+	📄README.md	(Ici)
+
+## La classe Auto
 
 - Compléter les méthodes de la classe `Auto`
 - Toutes les méthodes sont statiques
 - Conseils :
 	- Commencer par créer toutes les méthodes vides avec les bons paramètres et la bonne valeur de retour
 	- Faire chaque méthode en oubliant le contexte dans lequel elles seront utilisées. _"Elles prennent des données et retournent une valeur. Point final!"_
-	- Tester __CHAQUE__ méthode individuellement en ajoutant une ligne de test à la fin du fichier PHP de la classe La ligne de test doit être à l'extérieur de la classe.
+	- Tester __CHAQUE__ méthode individuellement en ajoutant une ligne de test dans la page `test.php`.
 
 ## Méthodes
 1. Méthode statique `titre`
@@ -49,9 +71,6 @@
 		- `$nomModele` : _string_ &mdash; Le modele de voiture
 	- Valeur de retour : _string_ &mdash; Le HTML de la balise `<a>`
 	 
----
-
-
 1. Méthode statique `image`
 	- Retourne le code HTML d'une image composé en fonction des paramètres et en suivant le modèle suivant : `<img src="images/ford_fiesta.jpg" class="voiture" alt="Ford Fiesta" title="Ford Fiesta" />`
 	- Notes
@@ -129,6 +148,9 @@
 	 $nomModele : _string_ &mdash; Le modele à rechercher dans la marque
 	  &mdash; : _string_ Le HTML du div "voiture"
 	 */
----
-	/*LIGNE DE TEST*/
-	//echo Auto::titre('Ford', 'Fiesta', 'strong');
+## La page de tests
+
+```php
+/*LIGNE DE TEST*/
+echo Auto::titre('Ford', 'Fiesta', 'strong');
+```

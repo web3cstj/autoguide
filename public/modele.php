@@ -13,7 +13,7 @@ Cette page affiche une auto en fonction de la marque et de l'adresse fournis dan
 - Cette page s'attend à recevoir de l'adresse les données "nomMarque" et "nomModele". Il faut donc récupérer ces données.
 - S'il manque une de ces deux données dans l'adresse, on DOIT retourner à la page index.php
 - Récupérer la voiture correspondante
-- Si la voiture ne se trouve pas dans la variable $donnees, on DOIT retourner à la page index.php
+- Si la voiture ne se trouve pas dans la variable $voitures, on DOIT retourner à la page index.php
 =========================================================================
 */
 include_once("../src/donnees.inc.php");
@@ -25,7 +25,7 @@ if (!isset($_GET['nomMarque']) || !isset($_GET['nomModele'])) {
 }
 $nomMarque = $_GET['nomMarque'];
 $nomModele = $_GET['nomModele'];
-$voiture = Auto::trouverModele($donnees, $nomMarque, $nomModele);
+$voiture = Auto::trouverModele($voitures, $nomMarque, $nomModele);
 if ($voiture === false) {
 	header("location:index.php");
 	exit;

@@ -10,7 +10,7 @@ Votre nom :
 - Conseils :
 	- Commencer par créer toutes les méthodes vides avec les bons paramètres et la bonne valeur de retour
 	- Faire chaque méthode en oubliant le contexte dans lequel elles seront utilisées. "Elles prennent des données et retournent une valeur. Point final!"
-	- Tester CHAQUE méthode individuellement en ajoutant une ligne de test à la fin de ce document (comme pour l'exercice "objet divers". La ligne de test doit être à l'extérieur de la classe.
+	- Tester CHAQUE méthode individuellement en ajoutant une ligne de test dans la page test.php
 */
 class Auto {
 	/** Méthode "titre" qui retourne le titre d'une voiture dont la marque et le modele sont passés en paramètres.
@@ -252,6 +252,3 @@ class Auto {
 	}
 
 }
-
-/*LIGNE DE TEST*/
-//echo Auto::titre('Ford', 'Fiesta', 'strong');
