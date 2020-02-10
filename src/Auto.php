@@ -122,8 +122,13 @@ class Auto {
 		$resultat = '';
 		$resultat .= '<ul class="listeMarques">';
 		foreach($autos as $nomMarque=>$autosMarque) {
-			$resultat .= '<li>';
-			$resultat .= '<a href="marque.php?nomMarque='.$nomMarque.'">'.$nomMarque.'</a>';
+			$resultat .= '<li style="position:relative;">';
+			$resultat .= '<a href="marque.php?nomMarque='.$nomMarque.'">';
+			$resultat .= ''.$nomMarque.'';
+			$resultat .= '<span class="logo">';
+			$resultat .= '<img src="images/logos/'.$nomMarque.'.svg"/>';
+			$resultat .= '</span>';
+			$resultat .= '</a>';
 			$resultat .= self::listeModeles($nomMarque, $autosMarque);
 			$resultat .= '</li>';
 

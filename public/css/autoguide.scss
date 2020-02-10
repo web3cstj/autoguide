@@ -138,9 +138,15 @@ ul.listeMarques
 		font-size: larger;
 		font-weight: bold;
 		background-color: rgba(0,0,0,.1);
-		display: block;
+		display: grid;
+		grid-template-columns: 1fr 4em;
 		padding: 0 .5em;
 		margin: 1em 0 .5em;
+		&>.logo>img {
+			position: absolute;
+			max-width: 4em;
+			max-height: 2em;
+		}
 	}
 }
 ul.listeModeles {

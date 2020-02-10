@@ -74,4 +74,11 @@ $donnees = array(
 			'description'=>'La célèbre marque italienne a craqué elle aussi pour la commercialisation d’un coupé-cabriolet ou si vous préférez une décapotable à toit rigide rétractable. Depuis l’an dernier, la California est devenue une Ferrari à part entière. Elle est animée par un moteur V8 de 4,3 litres à injection directe, placé à l’avant, qui pour les besoins délivre 460 chevaux et 358 lb-pi de couple. Son habitacle des plus somptueux peut accueillir jusqu’à quatre passagers.',
 		),
 	),
+	'Toyota'=>array(
+	),
+	'Honda'=>array(
+	),
+	'BMW'=>array(
+	),
+
 );
